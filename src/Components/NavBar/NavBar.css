@@ -1,0 +1,16 @@
+
+.say-nav {
+    background-color: gray;
+    padding: 20px 25px;
+    box-shadow: 0 0 0 20px;
+
+}
+
+#logo {
+    font-size: 32px;
+    line-height:8px;
+    margin: 13px 16px;
+    color: white;
+    text-align: left;
+    cursor: pointer;
+}
