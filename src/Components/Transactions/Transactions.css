@@ -1,0 +1,8 @@
+.say-transactions {
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+    text-align: start;
+
+}
+

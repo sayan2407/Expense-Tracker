@@ -1,6 +1,11 @@
 .say-wallet {
     display: flex;
     align-items: center;
+    background: #626262;
+    margin: 15px 25px;
+    padding: 10px 20px;
+    border-radius: 10px;
+
 }
 
 .say-wallet div {
@@ -14,8 +19,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-radius: 10px;
-    background-color: gray;
+    border-radius: 15px;
+    background: #9B9B9B;
+
 }
 
 .card div {
