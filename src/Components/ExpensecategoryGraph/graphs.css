@@ -4,3 +4,9 @@
     flex: 1;
     text-align: start;
 }
+
+.bar-graph {
+    background: white;
+    height: 350px;
+    border-radius: 15px;
+}

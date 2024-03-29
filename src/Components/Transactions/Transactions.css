@@ -6,3 +6,37 @@
 
 }
 
+.credit, .debit {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    margin: 8px;
+    border-bottom: 1px solid black;
+}
+
+.action-section {
+    display: flex;
+    align-items: center;
+}
+
+.recent-transactions {
+    background-color: white;
+    border-radius: 15px;
+    height: 350px;
+    margin-right: 10px;
+}
+
+.recent-transactions nav {
+    display: flex;
+    justify-content:center;
+}
+
+.credit p {
+    color: green;
+}
+
+.debit p {
+    color : red;
+}
+
+

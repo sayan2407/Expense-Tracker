@@ -16,11 +16,18 @@ const PieGraph = () => {
       const curData = [];
       transactions.map((item, index)=> {
         if ( item.type === "debit" ) {
-          curData.push({
-            id: index,
-            value: item.amount,
-            label: item.category
-          })
+          let findIndex = curData.findIndex(ele =>ele.label === item.category);
+          console.log('findIndex ', findIndex);
+          if ( findIndex >= 0 ) {
+            curData[findIndex].value += item.amount;
+          } else {
+            curData.push({
+              id: index,
+              value: item.amount,
+              label: item.category
+            })
+          }
+         
         }
       
       })
@@ -32,16 +39,23 @@ const PieGraph = () => {
   }, [transactions])
 
   return (
-    <PieChart
-    series={[
-      {
-        data,
-        highlightScope: { faded: 'global', highlighted: 'item' },
-        faded: { innerRadius: 30, additionalRadius: -30, color: 'gray' },
-      },
-    ]}
-    height={200}
-  />  )
+    (data.length) ? (
+      <PieChart
+      series={[
+        {
+          data,
+          highlightScope: { faded: 'global', highlighted: 'item' },
+          faded: { innerRadius: 30, additionalRadius: -30, color: 'gray' },
+        },
+      ]}
+      height={200}
+    />  
+    ) : (
+      <p>No Expense Found</p>
+    )
+
+  
+  )
 }
 
 export default PieGraph;
